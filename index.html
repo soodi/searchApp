@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Capital Code Challenge</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+      <img src="images/pc_logo_white.png" alt="Personal Capital">
+    </header>
+    <main>
+        <section class="container">
+            <div>
+                <input type="text" id="input" list="json-datalist" class="inputText" placeholder="Enter your bank name">
+            </div>
+	        <div id="box">
+                <div >
+                    <h3 class="bank"> Bank</h3>
+                     <ul id="bank"></ul>
+               </div>
+               <div>
+                    <h3 class="investment">Investment</h3>
+                    <ul id="investment"></ul>
+                </div>
+                <div>
+                    <h3 class="credit-card">Credit Card</h3>
+                    <ul  id="credit-card"></ul>
+                </div>
+                <div>
+                    <h3 class="loan">Loan</h3>    
+                    <ul  id="loan"></ul>
+                </div>
+                <div>
+                    <h3 class="mortgage">Mortgage</h3>
+                    <ul id="mortgage"></ul>
+                </div>
+	       </div>
+        </section>
+    </main>
+    <footer>
+      <p>© Personal Capital Corporation</p>
+    </footer>
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
