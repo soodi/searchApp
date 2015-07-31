@@ -8,7 +8,7 @@
 			$('#credit-card').empty();
 			var $input = $('#input').val();
 			$input = $input.toLocaleLowerCase();
-			if($input.length > 1){
+			if($input){
 				$.getJSON('products.json',function(products){
 			        $.each(products, function(index, product){
 			        	$.each(product, function(index, item){
