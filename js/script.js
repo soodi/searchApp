@@ -8,12 +8,13 @@
 			$('#credit-card').empty();
 			var $input = $('#input').val();
 			$input = $input.toLocaleLowerCase();
-			if($input){
+			if($input.length > 1){
 				$.getJSON('products.json',function(products){
 			        $.each(products, function(index, product){
 			        	$.each(product, function(index, item){
 			        		$dataItem = (item.name).toLocaleLowerCase();
-			        		if ($dataItem.indexOf($input) > 0){
+			        		var regexPattern = new RegExp("\\b" + $input + "\\b", "g");
+			        		if ($dataItem.match(regexPattern)){
 			        			if (item.type == 'BANK'){
 	         						$('#bank').append('<li class="bankName">' + item.name + ' </li>');
 	         						$('#bank').append('<li class="url"><a href="' + item.url + '"</a>' + item.url + '</li>');
